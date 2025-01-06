@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stalker2</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :focus,
+  :active {
+    outline: none;
+  }
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+  img {
+    vertical-align: top;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  .logo img {
+    margin-left: 25px;
+    height: 20%;
+    box-shadow: 2px 2px 20px black;
+    width: 20%;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: -35px;
+  }
+  .search-bar input {
+    background-color: #bfbfbf;
+    padding: 5px;
+    font-size: 16px;
+    border: 3.5px solid black;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    height: 50px;
+    box-shadow: 2px 2px 20px black;
+  }
+  .search-bar button {
+    background-color: #f27405;
+    color: #fff;
+    border: 3.5px solid black;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    height: 50px;
+    box-shadow: 2px 2px 20px black;
+    transition: background-color 0.3s;
+  }
+  .search-bar button:hover {
+    background-color: #777;
+  }
+
+  .nav-links ul {
+    display: flex;
+    margin-left: 200px;
+  }
+  .nav-links ul li {
+    margin: 0 10px;
+    background-color: #f27405;
+    padding: 15px;
+    border: 3.5px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px black;
+    transition: transform 0.3s;
+  }
+  .nav-links ul li:hover {
+    transform: scale(1.1);
+  }
+  .nav-links ul li a {
+    color: black;
+    font-size: 16px;
+
+  }
+  .nav-links img {
+    height: 20px;
+    width: 20px;
+  }
+  .auth-buttons {
+    display: flex;
+  }
+  .auth-buttons button {
+    cursor: pointer;
+    height: 50px;
+    padding: 15px;
+    border: 3.5px solid black;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  .login {
+    background-color: black;
+    color: white;
+    margin-right: -10px;
+  }
+  .login:hover {
+    background-color: #766d6d;
+    color: black;
+  }
+  .register {
+    background-color: #f27405;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+  }
+  .register:hover {
+    background-color: #a35816;
+  }
+  .colum{
+    width: 80%;
+    float: left;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flexbox;
+    flex-direction: row;
+    
+  }
+  .colum a{
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    padding: 5px;
+  }
+  .colum img{
+    height: 80%;
+    max-height: 550px;
+    width: 100%;
+    margin: none;
+    padding: none;
+  }
+  .colum p{
+    font-size: 24px;
+    font-style: semibold;
+    border: 4px #1e1e1e;
+    border-style: solid;
+    background-color: #F27405;
+    width-max: 209px;
+    white-space: nowrap;
+    width: 150%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    background-color: #1E1E1E;
+    justify-content: flex-start;
+    color: black;
+  }
+  
+  .row a {
+    width: 20%;
+    height: 20%;
+    padding: none;
+    justify-content: left;
+    padding: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s;
+  }
+  .row a img{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+  }
+  .row a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .row p{
+    margin-right: 10px;
+    padding: 10px;
+    width: 40%;
+    height: 40%;
+    transition: background-color 0.3s;
+    font-size: 18px;
+  }
+  .row p:hover {
+    background-color: #a65d03;
+    color: black;
+    cursor: pointer;
+  }
+  .content {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row; 
+    font-family: 'Open Sans' sans-serif;
+    color: white;
+    border: 3px solid black;
+  }
+  .content h1 {
+    margin-bottom: 120px;
+    margin-left: 10px;
+    margin-top: 80px;
+    font-size: 36px;
+  }
+  .content-right{
+    justify-content: right;
+    display: flex;
+    width: 30%;
+    margin-bottom: 5px;
+  }
+  .content-right h1{
+    margin-bottom: 5px;
+  }
+  .content-left{
+    width: 70%;
+    margin-left: 50px;
+  }
+  .toptext {
+    border: 3px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+  }
+  .bottomtext {
+    display: flex;
+    width: 100%; 
+    margin-bottom: 0px; 
+  }
+  .bottomlefttext {
+    width: 50%; 
+    margin-bottom: 30px; 
+    border: 3px solid black;
+    padding: 10px;
+    justify-content: left;
+    font-size: 15px;
+    border-top: 0px;
+    padding-bottom: 50px;
+  }
+  .bottomlefttext h1 {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  .bottomlefttext p{
+    margin-left: 10px;
+    
+  }
+  .bottomrighttext {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 15px;
+    border-top: 0px;
+    border-left: 0px;
+  }
+  .top-bottomrighttext {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 10px; 
+  }
+  .bottom-bottomrighttext {
+    display: flex;
+    justify-content: center; 
+    margin-top: 60px;
+  }
+  .bottomrighttext h1{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  .bottomrighttext p {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .bottomrighttext p:last-of-type {
+    margin-bottom: 0;
+  }
+  .bottom-bottomrighttext a{
+    font-size: 36px;
+    font-style: semibold;
+    border: 4px #1e1e1e;
+    border-style: solid;
+    background-color: #F27405;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    padding-right: 20px;
+    transition: background-color 0.3s;
+  }
+  .bottom-bottomrighttext a:hover{
+    background-color: #a65d03;
+    color: black;
+    cursor: pointer;
+  }
+</style>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="img/Logo.png" alt="Логотип"></a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Пошук...">
+      <button>🔍</button>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="feedback.html">Відгуки</a></li>
+        <li><a href="Help.html">Підтримка</a></li>
+        <li><a href="#"><img src="img/bag.png"></a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login">Login</button>
+      <button class="register">Register</button>
+    </div>
+    
+  </header>
+  <div class="content">
+    <div class="content-left">
+      <h1>
+        STALKER 2: Shadow of Chernobyl 
+      </h1>
+      <div class="toptext">
+        <p>Відкрийте для себе Чорнобильську Зону<br> Відчуження сповнену небезпечних<br> ворогів, смертельних аномалій та<br> потужних артефактів. Напишіть свою<br> власну епічну історію, прокладаючи свій<br> шлях до Серця Чорнобиля.</p>
+      </div>
+      <div class="bottomtext">
+      <div class="bottomlefttext">
+        <h1 class="headertext">
+          Системні вимоги:
+        </h1>
+        <p>
+          РЕКОМЕНДОВАНІ:
+          ОС: Windows 10 x64 / Windows 11 x64<br>
+          Процесор: Intel Core i7-11700 / AMD Ryzen 7 5800X<br>
+          Оперативна пам’ять: 32 GB ОП<br>
+          Відеокарта: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT<br>
+          Місце на диску: 160 GB доступного місця<br>
+          Додаткові примітки: Graphics Preset: HIGH / Resolution: 1440p / Target FPS: 60. 32 GB Dual Channel RAM. SSD required. The above specifications were tested with TSR, DLSS, FSR and XeSS.
+        </p>
+      </div>
+      <div class="bottomrighttext">
+        <div class="top-bottomrighttext">
+        <h1 class="headertext">
+          Дата виходу:
+        </h1>
+        <p>20 листопада 2024</p>
+        </div>
+        <div class="bottom-bottomrighttext">
+        <a><p>Придбати</p></a>
+        </div>  
+      </div>
+    </div>
+    </div>
+    <div class="content-right">
+      <div class="colum">
+        <img src="imgcatalog/STALKER2/1.jpg" alt="Каталог 1" width="100%">
+        <div class="row">
+        <a href="stalker2page.html">
+          <img src="imgcatalog/icon/cd.png" alt="Посилання на товар" width="100%">
+        </a>
+        <p>
+          <a href="stalker2page.html">
+            210 UAH
+          </a>
+        </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

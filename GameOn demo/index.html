@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GameON</title>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav,
+    footer,
+    header,
+    aside {
+      display: block;
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      font-size: 14px;
+      line-height: 1;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+    img {
+      vertical-align: top;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: inherit;
+      font-weight: 400;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+    .logo img {
+      margin-left: 25px;
+      height: 20%;
+      box-shadow: 2px 2px 20px black;
+      width: 20%;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-left: -35px;
+    }
+    .search-bar input {
+      background-color: #bfbfbf;
+      padding: 5px;
+      font-size: 16px;
+      border: 3.5px solid black;
+      border-right: none;
+      border-radius: 10px 0 0 10px;
+      height: 50px;
+      box-shadow: 2px 2px 20px black;
+    }
+    .search-bar button {
+      background-color: #f27405;
+      color: #fff;
+      border: 3.5px solid black;
+      padding: 0 15px;
+      cursor: pointer;
+      border-radius: 0 10px 10px 0;
+      height: 50px;
+      box-shadow: 2px 2px 20px black;
+      transition: background-color 0.3s;
+    }
+    .search-bar button:hover {
+      background-color: #777;
+    }
+
+    .nav-links ul {
+      display: flex;
+      margin-left: 200px;
+    }
+    .nav-links ul li {
+      margin: 0 10px;
+      background-color: #f27405;
+      padding: 15px;
+      border: 3.5px solid black;
+      border-radius: 10px;
+      box-shadow: 2px 2px 20px black;
+      transition: transform 0.3s;
+    }
+    .nav-links ul li:hover {
+      transform: scale(1.1);
+    }
+    .nav-links ul li a {
+      color: black;
+      font-size: 16px;
+      
+    }
+    .nav-links img {
+      height: 20px;
+      width: 20px;
+    }
+
+    .auth-buttons {
+      display: flex;
+    }
+    .auth-buttons button {
+      cursor: pointer;
+      height: 50px;
+      padding: 15px;
+      border: 3.5px solid black;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+    .login {
+      background-color: black;
+      color: white;
+      margin-right: -10px;
+    }
+    .login:hover {
+      background-color: #766d6d;
+      color: black;
+    }
+    .register {
+      background-color: #f27405;
+      border-left: none;
+      border-radius: 0 10px 10px 0;
+    }
+    .register:hover {
+      background-color: #a35816;
+    }
+
+    .content {
+      margin-top: 40px;
+      color: white;
+      display: flex;
+      gap: 10px;
+    }
+    .aboutUS {
+      padding: 3%;
+      width: 50%;
+    }
+    .aboutUS h1 {
+      font-size: 64px;
+    }
+    .aboutUS p {
+      margin-top: 60px;
+      font-size: 24px;
+    }
+    .aboutUS ul li {
+      height: 50px;
+      width: 250px;
+      background-color: #f27405;
+      margin-top: 170px;
+      font-size: 36px;
+      padding: 3px;
+      border: 3.5px solid black;
+      border-radius: 20px;
+      box-shadow: 2px 2px 20px black;
+      transition: transform 0.3s;
+      color: black;
+      text-align: center;
+    }
+    .aboutUS ul li:hover {
+      transform: scale(1.1);
+    }
+    .game {
+      width: 62%;
+    }
+
+    .sale {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    .sale div {
+      transition: transform 0.3s;
+    }
+    .sale div:hover {
+      transform: translate(-10px, -10px);
+    }
+    .footer{
+      margin-top: 60px;
+      background-color: #BFBFBF;
+      font-size: 36px;
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      color: black;
+    }
+    .footer div {
+      background-color: #BFBFBF;
+      height: 80px;
+      width: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 3.5px solid #f27405;
+    }
+    .footer1{
+      background-color: #BFBFBF;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+    }
+    .footer1 div{
+      background-color: #BFBFBF;
+      width: 350px;
+    }
+    .footer1 div p{
+      font-size: 24px;
+      margin: 80px 15px;
+    }
+    .footer1 ul {
+      margin: 80px 15px ;
+      display: flex;
+      flex-wrap: wrap; 
+      gap: 10px; 
+    }
+    .footer1 ul li {
+      width: 100px;
+      height: 55px;
+      background-color: #f27405;
+      padding: 15px;
+      border: 3.5px solid black;
+      border-radius: 15px;
+      transition: transform 0.3s;
+      flex: none; 
+    }
+    .footer1 ul li:nth-child(4) { 
+      margin-top: 20px; 
+      order: 1; 
+    }
+
+    .footer1 ul li:hover {
+      transform: scale(1.1);
+    }
+    .footer1 ul li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-size: 16px;
+    }
+    .footer1 div a img{
+      width: 50px;
+      height: 50px;
+      margin: 80px 30px;
+    }
+
+    .bigred{
+      font-size: 20px;
+      color: red;
+    }
+    header {
+      display: flex;
+      height: 80px;
+    }
+    header img{
+      width: 13%;
+    }
+    .auth-buttons {
+      display: flex;
+    }
+    .auth-buttons button {
+      cursor: pointer;
+      height: 50px;
+      padding: 15px;
+      border: 3.5px solid black;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+    .login {
+      background-color: black;
+      color: white;
+      margin-right: -10px;
+    }
+    .login:hover {
+      background-color: #766d6d;
+      color: black;
+    }
+    .register {
+      background-color: #f27405;
+      border-left: none;
+      border-radius: 0 10px 10px 0;
+    }
+    .register:hover {
+      background-color: #a35816;
+    }
+
+  </style>
+  <body>
+	   <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="img/Logo.png" alt="Логотип"></a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Пошук...">
+      <button>🔍</button>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="feedback.html">Відгуки</a></li>
+        <li><a href="Help.html">Підтримка</a></li>
+        <li><a href="#"><img src="img/bag.png"></a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login">Login</button>
+      <button class="register">Register</button>
+    </div>
+  </header>
+  <div class="content">
+    <div class="aboutUS">
+      <h1>GameON</h1>
+      <p>Ласкаво просимо до GameON - магазину ліцейзійних ігор для ПК, і не тільки. У нас ви можете купити ліцензійні копії найтоповіших ігор по самим низьким цінам!</p>
+      <ul><li><a href="catalog.html">Каталог</a></li></ul>
+    </div>
+    <div class="game">
+     <a href="#"><img src="img/Stalker.png"></a>
+    </div>
+  </div>
+  <div class="sale">
+    <div><a href="stalker2page.html"><img src="img/StalkerSale.png"></a></div>
+    <div><a href="gta5page.html"><img src="img/GTASale.png"></a></div>
+    <div><a href="metropage.html"><img src="img/MetroSale.png"></a></div>
+  </div>
+  <div class="footer">
+   <div>
+     <h2>Про нас</h2>
+   </div>
+   <div>
+     <h2>Магазин ігор</h2>
+   </div>
+   <div>
+     <h2>Соціальні мережі</h2>
+   </div>
+  </div>
+  <div class="footer1">
+    <div>
+      <p>GameHub - магазину ліцейзійних ігор для ПК, і не тільки. У нас ви можете купити ліцензійні копії найтоповіших ігор по самим низьким цінам!</p>
+    </div>
+    <div>
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="feedback.html">Відгуки</a></li>
+        <li><a href="Help.html">Підтримка</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="https://www.tiktok.com/@mindogunlod?is_from_webapp=1&sender_device=pc"><img src="img/tiktok.png"></a>
+      <a href="https://www.instagram.com/mindogunlod/"><img src="img/instagram.png"></a>
+      <a href="#"><img src="img/facebook.png"></a>
+    </div>
+  </div>
+  </body>
+</html>
