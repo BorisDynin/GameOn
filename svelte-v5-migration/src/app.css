@@ -63,7 +63,7 @@
       box-shadow: 2px 2px 20px black;
     }
     .search-bar button {
-      background-color: #f27405;
+      background-color: #ff4500; /* OrangeRed */
       color: #fff;
       border: 3.5px solid black;
       padding: 0 15px;
@@ -124,12 +124,12 @@
       color: black;
     }
     .register {
-      background-color: #f27405;
+      background-color: #ff4500; /* OrangeRed */
       border-left: none;
       border-radius: 0 10px 10px 0;
     }
     .register:hover {
-      background-color: #a35816;
+      background-color: #e03e00;
     }
 
     .content {
@@ -152,7 +152,7 @@
     .aboutUS ul li {
       height: 50px;
       width: 250px;
-      background-color: #f27405;
+      background-color: #ff4500; /* OrangeRed */
       margin-top: 170px;
       font-size: 36px;
       padding: 3px;
@@ -197,7 +197,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 3.5px solid #f27405;
+      border-bottom: 3.5px solid #ff4500; /* OrangeRed */
     }
     .footer1{
       background-color: #BFBFBF;
@@ -223,7 +223,7 @@
     .footer1 ul li {
       width: 100px;
       height: 55px;
-      background-color: #f27405;
+      background-color: #ff4500; /* OrangeRed */
       padding: 15px;
       border: 3.5px solid black;
       border-radius: 15px;
@@ -262,3 +262,63 @@
     header img{
       width: 13%;
     }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .nav-links ul li {
+    margin: 10px 0;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .aboutUS {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .game {
+    width: 100%;
+  }
+
+  .sale {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+/* Hover Effects */
+.nav-links ul li:hover,
+.auth-buttons button:hover,
+.aboutUS ul li:hover,
+.sale div:hover,
+.footer1 ul li:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
