@@ -1,0 +1,51 @@
+
+> svelte-migration-v1@0.0.1 dev
+> vite dev
+
+
+  VITE v7.3.1  ready in 1364 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Header.svelte:15:12 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Header.svelte:15:24 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Hero.svelte:8:5 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Hero.svelte:8:8 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Hero.svelte:8:17 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:2:9 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:2:37 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:3:9 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:3:33 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:4:9 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Sales.svelte:4:34 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:18:15 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:25:6 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:25:86 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:26:6 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:26:55 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:27:6 Buttons and links should either contain text or have an `aria-label`, `aria-labelledby` or `title` attribute
+https://svelte.dev/e/a11y_consider_explicit_label
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:27:9 '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute
+9:43:47 AM [vite-plugin-svelte] src/lib/components/Footer.svelte:27:18 `<img>` element should have an alt attribute
+https://svelte.dev/e/a11y_missing_attribute
+
+[1;31m[404] GET /app.css[0m
+9:44:35 AM [vite] (ssr) page reload src/routes/+page.svelte
+9:44:38 AM [vite] (ssr) page reload src/routes/+layout.svelte
